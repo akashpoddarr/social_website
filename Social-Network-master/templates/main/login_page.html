@@ -1,0 +1,51 @@
+{% extends 'base2.html' %}
+
+{% block title %}
+login
+{% endblock title %}
+
+{% block content %}
+<form action="/login" method="post">
+  {% csrf_token %}
+<div class="ui placeholder segment" style="width:550px; margin-top:200px; margin-left:200px; " >
+    <div class="column">
+      <div class="ui massive form">
+        <div class="field">
+          <label for="loginusername">Username</label>
+          <div class="ui left icon input">
+            <input type="text" id="loginusername" name="loginusername" placeholder="Username">
+            <i class="user icon"></i>
+          </div>
+        </div>
+        <div class="field">
+          <label for="loginpassword">Password</label>
+          <div class="ui left icon input">
+            <input type="password" id="loginpassword" name="loginpassword" >
+            <i class="lock icon"></i>
+          </div>
+        </div>
+        <button type="submit" class="ui blue submit massive button" style="margin-left: 174px;">Login</div>
+
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
+
+{% block scripts %}
+<script>
+$(document).ready(function(){
+    console.log('working')
+})
+</script>
+{% endblock scripts %}
